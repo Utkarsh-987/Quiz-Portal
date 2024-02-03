@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(184deg,#8754ff,#8E2DE2);
+      text-align: center;
+      margin-top: 100px;
+    }
+    p{
+      background-color: "lightgreen";
+    }
+    #login-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #alertMessage {
+      color: red;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="login-container">
+    <h2>Welcome!</h2>
+    <p>Enter your name:</p>
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <button onclick="login()">Login</button>
+    <div id="alertMessage"></div>
+  </div>
+
+  <script>
+    function login() {
+      var userName = document.getElementById("nameInput").value;
+      var alertMessage = document.getElementById("alertMessage");
+
+      if (userName.trim() === "") {
+        alertMessage.textContent = "Please enter your name.";
+      } else {
+        alertMessage.textContent = ""; 
+        window.location.href = "MCQ.html";
+      }
+    }
+  </script>
+</body>
+
+</html>
